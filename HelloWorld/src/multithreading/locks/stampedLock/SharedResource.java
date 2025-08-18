@@ -43,6 +43,8 @@ public class SharedResource {
         try {
             System.out.println("Write lock acquired by: " + Thread.currentThread().getName());
             Thread.sleep(4000);
+            a--;
+            System.out.println("Updated the value successfully: " + a + " by " + Thread.currentThread().getName());
         } catch (InterruptedException ignore) {
         }
         finally {
